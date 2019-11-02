@@ -5,7 +5,7 @@ Application for exam in class PGR301 at Kristiania University College as seen at
 ## Getting started 
 
 To get started with this application, first set up the infrastructure following the guidelines on this repo: 
-[TODO: Insert link to repo]
+[https://github.com/pgr301-eksamen-app/pgr301-infrastructure]
 
 To run locally, set the variables under _local_, and 
 run the script called `./run_influx.sh` if you don't already have influx running.
