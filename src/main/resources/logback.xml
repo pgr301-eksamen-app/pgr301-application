@@ -1,0 +1,24 @@
+<configuration debug="true">
+    <shutdownHook class="ch.qos.logback.core.hook.DelayingShutdownHook"/>
+    <appender name="LogzioLogbackAppender" class="io.logz.logback.LogzioLogbackAppender">
+        <token>${LOGZ_TOKEN}</token>
+        <logzioUrl>${LOGZ_URL}</logzioUrl>
+        <additionalFields>APP_NAME=$APP_NAME</additionalFields>
+        <logzioType>InfoLevel</logzioType>
+        <addHostname>true</addHostname>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+    </appender>
+
+    <appender name="LOCAL" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d|%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="LogzioLogbackAppender"/>
+        <appender-ref ref="LOCAL"/>
+    </root>
+</configuration>

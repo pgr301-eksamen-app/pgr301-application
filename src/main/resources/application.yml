@@ -1,0 +1,6 @@
+togglz:
+  features:
+    TYPE_FEATURE:
+      enabled: true
+    NAMING_FEATURE:
+      enabled: true
