@@ -23,7 +23,9 @@ You need to have two CLI tools for this to work:
 ### Variables
 List of variables to set either for Travis or locally. 
 To set a variable for travis you can run the following command: 
->`travis encrypt SOMEVAR="secretvalue" --add`
+>`travis encrypt SOMEVAR="secretvalue" --add --pro` (for travis-ci.com)
+
+>`travis encrypt SOMEVAR="secretvalue" --add` (for travis-ci.org)
 
 To set a variable locally you can use one of the following commands: 
 > MacOS
